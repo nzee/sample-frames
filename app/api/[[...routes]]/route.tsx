@@ -79,7 +79,7 @@ app.frame('/okto', (c) => {
       </div>
     ),
     intents: [
-      <TextInput placeholder="Enter custom fruit..." />,
+      <TextInput placeholder="Wallet of choice" />,
       <Button value="phantom">Phantom</Button>,
       <Button value="metamask">Metamask</Button>,
       <Button value="okto">Okto</Button>,
