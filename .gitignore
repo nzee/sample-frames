@@ -1,0 +1,61 @@
+# Next.js build output
+.next/
+out/
+
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# macOS filesystem artifacts
+.DS_Store
+
+# Windows filesystem artifacts
+Thumbs.db
+
+# Linux filesystem artifacts
+.*~
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Optional npm cache & npx
+.npm
+.npx
+
+# Optional eslint cache
+.eslintcache
+
+# Optional next.js cache
+.next/cache
+
+# Optional build cache
+.cache
+
+# Optional typescript cache
+*.tsbuildinfo
+
+# Production build files
+/public/build/
+
+# Storybook build
+.storybook-out/
+
+# Jest
+/coverage
