@@ -2,7 +2,7 @@ import { getFrameMetadata } from 'frog/next'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 // import landing component
-import Landing from '../components/Landing'
+import { landing } from '../components/landing'
 import styles from './page.module.css'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -16,6 +16,6 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function Home() {
   return (
-    <Landing />
+    <landing />
   )
 }
