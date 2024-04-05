@@ -8,55 +8,13 @@ import { serveStatic } from 'frog/serve-static'
 
 const app = new Frog({
   assetsPath: '/',
-  basePath: '/api',
+  basePath: '/okto',
   // Supply a Hub to enable frame verification.
   // hub: neynar({ apiKey: 'NEYNAR_FROG_FM' })
 })
 
 // Uncomment to use Edge Runtime
 // export const runtime = 'edge'
-
-// create a new app frame with the path /logo-quiz and a callback function that takes in a context object c
-app.frame('/logo', (c) => {
-  // destructure the context object c to get the buttonValue, inputText, and status
-  const { buttonValue, inputText, status } = c
-  
-  // set the wallet to the inputText or buttonValue
-  const wallet = inputText || buttonValue
-  
-  // return the response object
-  return c.res({
-    // set the image to a div element
-    action: '/logo-check',
-    image: (
-      <div
-        style={{
-          alignItems: 'center',
-          background:
-            status === 'response'
-              ? 'linear-gradient(to right, #432889, #17101F)'
-              : 'white',
-          backgroundSize: '100% 100%',
-          display: 'flex',
-          flexDirection: 'column',
-          flexWrap: 'nowrap',
-          height: '100%',
-          justifyContent: 'center',
-          textAlign: 'center',
-          width: '100%',
-        }}
-      >
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV7jOYaocjy-HsTkKp8Xg4dhRqRpc0_PVeDBxWqPBK2g&s" width="400" height="400" />
-      </div>
-    ),
-    // set the intents to an array of Button components
-    intents: [
-      <TextInput placeholder="Name the chain" />,
-      <Button value="phantom">Submit</Button>,
-    ],
-  })
-})
-
 
 app.frame('/okto', (c) => {
   const { buttonValue, inputText, status } = c
